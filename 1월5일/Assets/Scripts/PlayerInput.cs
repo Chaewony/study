@@ -30,7 +30,7 @@ public class PlayerInput : MonoBehaviour
         //상호작용 체크해주는 인풋
         //스페이스 바 / 상자 밀기
     }
-
+    
     private void FixedUpdate()
     {
         playerMove.Move(h);
