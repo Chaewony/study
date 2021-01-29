@@ -22,3 +22,10 @@ public class BuffInfo : ScriptableObject
     public int myHp { get => hp; }
     public int myDefence { get => defence; }
 }
+
+public enum buffSlot
+{
+    BuffSlot1,
+    BuffSlot2,
+    BuffSlot3
+}

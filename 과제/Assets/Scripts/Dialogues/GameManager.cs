@@ -36,13 +36,13 @@ public class GameManager : MonoBehaviour
         if (talkData == null)
         {
             isAction = false;
-            talkIndex = 0; //인덱스 초기화, 다시 말 못걸게 하고 싶으면 여기를 지우면 됨
+            //talkIndex = 0; //인덱스 초기화, 다시 말 못걸게 하고 싶으면 여기를 지우면 됨
             return;
         }
 
         if(isNpc)
         {
-            talkText.text = scanObject.name + ": "+ talkData;
+            talkText.text = scanObject.name + ": "+ talkData; //대화창 앞에 이름 띄우기
         }
         else
         {

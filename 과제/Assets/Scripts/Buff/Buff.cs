@@ -7,22 +7,19 @@ public class Buff : MonoBehaviour
 {
     [SerializeField]
     private List<BuffInfo> allBuff = new List<BuffInfo>();
-
     [SerializeField]
     private GameObject buffUI;
-
     [SerializeField]
     private Text[] buffNames;//빈 리스트 생성
-
     private List<BuffInfo> selectBuff = new List<BuffInfo>();
+    public string choosenBuff;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        ShowBuff(); //버프UI가 켜지면 자동 실행
+        ShowBuff();
     }
 
-//////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////
     public void ShowBuff()
     {
         for (int i = 0; i < 5;)
@@ -35,9 +32,15 @@ public class Buff : MonoBehaviour
             }
         }
 
-        for(int i = 0; i<selectBuff.Count;i++)
+        for (int i = 0; i < selectBuff.Count; i++)
         {
             buffNames[i].text = selectBuff[i].myBuffName;
         }
+    }
+
+    public void ChooseBuff(int indexNum)
+    {
+        choosenBuff = selectBuff[indexNum].myBuffName;
+        Debug.Log(choosenBuff);
     }
 }

@@ -666,6 +666,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Buff\Buff.cs" />
     <Compile Include="Assets\Scripts\Buff\BuffInfo.cs" />
+    <Compile Include="Assets\Scripts\Buff\SlotType.cs" />
     <Compile Include="Assets\Scripts\Dialogues\GameManager.cs" />
     <Compile Include="Assets\Scripts\Dialogues\ObjData.cs" />
     <Compile Include="Assets\Scripts\Dialogues\TalkManager.cs" />

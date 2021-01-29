@@ -23,7 +23,8 @@ public class TalkManager : MonoBehaviour
     {
         if (talkIndex == talkData[id].Length)
         {
-            buffUI.SetActive(true); //버프UI 켜주기
+            buffUI.SetActive(true); //버프UI 켜주기 
+            //여기서 한 번 버프 유아이가 켜지면 다시 못켜지게 하고 싶음 
             return null;
         }
         else
