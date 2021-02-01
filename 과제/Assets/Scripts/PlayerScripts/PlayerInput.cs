@@ -9,17 +9,29 @@ public class PlayerInput : MonoBehaviour
     private PlayerInteraction playerInteraction;
     
     [SerializeField]
-    private Collider2D attackCol; //칼 콜리더
+    private Collider2D swordCol; //칼 콜리더
+    [SerializeField]
+    private GameObject fireBall; //오른쪽 파이어볼
+    [SerializeField]
+    private GameObject fireBallLeft; //왼쪽 파이어볼
+    [SerializeField]
+    private GameObject rhytnmUI;
+
 
     private float h;
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        swordCol.gameObject.SetActive(false);
+        fireBall.gameObject.SetActive(false);
+        fireBallLeft.gameObject.SetActive(false);
+        rhytnmUI.gameObject.SetActive(false);
+    }
     void Start()
     {
         playerMove = GetComponent<PlayerMove>();
         playerAttack = GetComponent<PlayerAttack>();
         playerInteraction = GetComponent<PlayerInteraction>();   
-        attackCol.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -61,22 +73,32 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-    private void AttackInput()
+    private void AttackInput() //공격
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S)) //소드
         {
-            StartCoroutine(playerAttack.Attack());
+            StartCoroutine(playerAttack.Sword());
+        }
+
+        if(Input.GetKeyDown(KeyCode.D)) //파이어볼
+        {
+            StartCoroutine(playerAttack.FireBall());
+        }
+
+        if (Input.GetKeyDown(KeyCode.F)) //리듬 스킬
+        {
+            StartCoroutine(playerAttack.Rhythm());
         }
         // if (can attack == true)점프공격 가능
         //    playerAttack.Attack();
 
-            // if (can skillAttack == true)
-            //    playerAttack.skillAttack();
+        // if (can skillAttack == true)
+        //    playerAttack.skillAttack();
 
-            /*if (Input.GetKeyDown(KeyCode.Z))
-            {
-                playerAttack.Attack();
-            }*/
+        /*if (Input.GetKeyDown(KeyCode.Z))
+        {
+            playerAttack.Attack();
+        }*/
     }
 
     private void InteractionInput()

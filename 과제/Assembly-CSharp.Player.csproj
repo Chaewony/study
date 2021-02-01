@@ -666,8 +666,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Buff\Buff.cs" />
     <Compile Include="Assets\Scripts\Buff\BuffInfo.cs" />
+    <Compile Include="Assets\Scripts\Buff\ChoosenBuff.cs" />
     <Compile Include="Assets\Scripts\Buff\SlotType.cs" />
-    <Compile Include="Assets\Scripts\Dialogues\GameManager.cs" />
     <Compile Include="Assets\Scripts\Dialogues\ObjData.cs" />
     <Compile Include="Assets\Scripts\Dialogues\TalkManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\AttackState.cs" />
@@ -676,14 +676,25 @@
     <Compile Include="Assets\Scripts\EnemyScripts\IdleState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\MoveState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\State.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\HpBar.cs" />
     <Compile Include="Assets\Scripts\Parallax.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerHurt.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerInfo.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerInteraction.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\RhythmSkill\ComboManager.cs" />
+    <Compile Include="Assets\Scripts\RhythmSkill\EffectManager.cs" />
+    <Compile Include="Assets\Scripts\RhythmSkill\Note.cs" />
+    <Compile Include="Assets\Scripts\RhythmSkill\NoteManager.cs" />
+    <Compile Include="Assets\Scripts\RhythmSkill\SkillStackManager.cs" />
     <Compile Include="Assets\Scripts\StartScene\ButtonType.cs" />
+    <Compile Include="Assets\Scripts\StartScene\FadeEffect.cs" />
+    <Compile Include="Assets\Scripts\StartScene\FadeIn.cs" />
+    <Compile Include="Assets\Scripts\StartScene\FadeOut.cs" />
     <Compile Include="Assets\Scripts\StartScene\MainUI.cs" />
   </ItemGroup>
   <ItemGroup>

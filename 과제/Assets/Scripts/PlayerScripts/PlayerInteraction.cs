@@ -27,7 +27,7 @@ public class PlayerInteraction : MonoBehaviour
             dirVec = Vector2.left;
 
         //레이캐스팅
-        //Debug.DrawRay(rb.position, dirVec * 0.7f, new Color(0, 1, 0));
+        Debug.DrawRay(rb.position, dirVec * 0.7f, new Color(0, 1, 0));
         rayHit = Physics2D.Raycast(rb.position, dirVec, 0.7f, LayerMask.GetMask("NPC"));
         if (rayHit.collider != null)
         {

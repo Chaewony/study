@@ -65,6 +65,13 @@ public class Enemy : MonoBehaviour
         currentState.onEnter(this);
     }
 
+    void OnTriggerEnter2D(Collider2D coll) //플레이어가 콜리더 안에 진입할 때
+    {
+        if (coll.gameObject.tag == "Player")
+        {
+            isPlayer = true;
+        }
+    }
     void OnTriggerStay2D(Collider2D coll) //플레이어가 콜리더 안에 있을 때
     {
         if (coll.gameObject.tag == "Player")

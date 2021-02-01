@@ -9,6 +9,7 @@ public class ButtonType : MonoBehaviour,IPointerEnterHandler, IPointerExitHandle
     public buttonType currentType;
     public Transform buttonScale;
     Vector3 defaultScale;
+    public FadeEffect fadeEffect;
 
     private void Start()
     {
@@ -20,12 +21,12 @@ public class ButtonType : MonoBehaviour,IPointerEnterHandler, IPointerExitHandle
         switch(currentType)
         {
             case buttonType.Start:
-                SceneManager.LoadScene("Forest");
-                //Debug.Log("게임 시작");
+                fadeEffect.StartCoroutine(fadeEffect.Fade(0, 1));
+                Invoke("LoadForest", 2); //2초 뒤 맵 로드
                 break;
             case buttonType.Quit:
-                Application.Quit();
-                //Debug.Log("나가기");
+                fadeEffect.StartCoroutine(fadeEffect.Fade(0, 1));
+                Invoke("LoadQuit", 2); //2초 뒤 맵 로드
                 break;
         }
     }
@@ -38,5 +39,16 @@ public class ButtonType : MonoBehaviour,IPointerEnterHandler, IPointerExitHandle
     public void OnPointerExit(PointerEventData eventData)
     {
         buttonScale.localScale = defaultScale;
+    }
+    
+    //////////////////////////////////////////////////////////////////////////
+   
+    public void LoadForest()
+    {
+        SceneManager.LoadScene("Forest");
+    }
+    public void LoadQuit()
+    {
+        Application.Quit();
     }
 }
